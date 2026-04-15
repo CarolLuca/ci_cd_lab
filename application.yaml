@@ -12,3 +12,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
+  syncPolicy:
+    automated:
+      prune: true      # Deletes resources no longer in Git
+      selfHeal: true   # Corrects manual changes made in the cluster
